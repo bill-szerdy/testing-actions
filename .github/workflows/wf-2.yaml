@@ -1,0 +1,19 @@
+name: Child
+
+on:
+  workflow_run:
+    workflows: ["Parent"]
+    branches:
+      - master
+    types:
+      - completed
+jobs:
+  build-and-deploy:
+    runs-on: [ubuntu-18.04]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Output
+      run: echo "baby boy"

@@ -1,0 +1,17 @@
+name: Parent
+on:
+  push:
+    paths:
+      - testfile.txt
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: [ubuntu-18.04]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Output
+        run: echo "your mom"
