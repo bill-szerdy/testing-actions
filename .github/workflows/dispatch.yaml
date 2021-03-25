@@ -12,7 +12,7 @@ on:
         default: ''
 jobs:
   testing:
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
       - name: Validate input
