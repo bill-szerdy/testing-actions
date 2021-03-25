@@ -16,11 +16,9 @@ jobs:
 
     steps:
       - name: Validate input
-        if: github.event.inputs.test_one == ''
         run: |
-          echo "Missing test_one value, deployment cannot continue"
-          exit 1
-
+          echo "test_one value: " ${{ github.event.inputs.test_one }}
+         
       - name: Continued
         run: |
           echo "If the input value was missing you should not be here"
